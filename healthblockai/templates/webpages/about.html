@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="{% static './css/about.css' %}">
+    <link rel="stylesheet" href="{% static './css/dropdown.css' %}">
+</head>
+<body>
+    <header>
+        
+        <div id="cont">
+            <div class="logo">
+                <p>HealthBlockAI</p>
+            </div>
+            <ul id="nav">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="drop"><a href="#">Register</a>
+                <ul class="dropdown">
+                    <li><a href="{% url 'patientRegister' %}">Patient Registration</a></li>
+                    <li><a href="{% url 'docterRegister' %}">Docture Registration</a></li>
+    
+                </ul>
+                </li>
+                <li class="drop"><a href="#">Login</a>
+                <ul class="dropdown">
+                    <li><a href="{% url 'patientlogin' %}">Patient Login</a></li>
+                    <li><a href=".{% url 'docterlogin' %}">Docture Login</a></li>
+                    <li><a href="{% url 'adminlogin' %}">Hospital Admin Login</a></li>
+    
+                </ul>
+            </li>
+                <li><a href=".{% url 'about' %}">AboutUs</a></li>
+    
+            </ul>
+        </div>
+    </header>
+    <section class="vision">
+        <h2>Our Vision</h2>
+        <p>At Blockchain based privercy preservation and dieases prediction using deep learning, we envision a future where healthcare data management is seamlessly intertwined with cutting-edge technologies to revolutionize patient care. Our mission is to harness the power of blockchain and deep learning to create a secure, predictive, and patient-centric healthcare ecosystem.</p>
+    </section>
+
+    <section class="who-we-are">
+        <h2>Who We Are</h2>
+        <p>We are a dedicated team of professionals passionate about leveraging technology to transform the healthcare landscape. With a diverse blend of expertise in blockchain, deep learning, and healthcare management, we are committed to pushing the boundaries of what's possible in predictive healthcare.</p>
+    </section>
+
+    <!-- Add more sections as needed -->
+
+    <section class="get-in-touch">
+        <h2>Get in Touch</h2>
+        <p>Have questions or want to learn more about [Project Name]? Contact us today. We're here to revolutionize healthcare with you.</p>
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2023 [Project Name]. All rights reserved.</p>
+    </footer> -->
+</body>
+</html>

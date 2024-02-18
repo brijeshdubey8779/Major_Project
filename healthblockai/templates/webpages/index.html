@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+    <link rel="stylesheet" href="{% static './css/dropdown.css' %}">
+</head>
+<body>
+    <header>
+        
+        <div id="cont">
+            <div class="logo">
+                <p>HealthBlockAI</p>
+            </div>
+            <ul id="nav">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="drop"><a href="#">Register</a>
+                <ul class="dropdown">
+                    <li><a href="{% url 'patientRegister' %}">Patient Registration</a></li>
+                    <li><a href="{% url 'docterRegister' %}">Docture Registration</a></li>
+    
+                </ul>
+                </li>
+                <li class="drop"><a href="#">Login</a>
+                <ul class="dropdown">
+                    <li><a href="{% url 'patientlogin' %}">Patient Login</a></li>
+                    <li><a href=".{% url 'docterlogin' %}">Docture Login</a></li>
+                    <li><a href="{% url 'adminlogin' %}">Hospital Admin Login</a></li>
+    
+                </ul>
+            </li>
+                <li><a href=".{% url 'about' %}">AboutUs</a></li>
+    
+            </ul>
+        </div>
+    </header>
+    
+        <section id="about-project">
+            <div class="logoimg">
+                <img src="{% static './assets/images/logo.png' %}" alt="logo"/>
+            </div>
+            <h2>About the Project</h2>
+            <p>Blockchain Health Predict is a revolutionary platform that combines blockchain technology and deep learning algorithms to securely manage healthcare data and accurately predict diseases. Our mission is to transform healthcare delivery by leveraging cutting-edge technologies.</p>
+            <div class="key-features">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Secure and transparent data storage</li>
+                    <li>Precision disease prediction using deep learning</li>
+                    <li>Empowering healthcare providers with actionable insights</li>
+                </ul>
+            </div>
+        </section>
+    
+        <section id="how-it-works">
+            <h2>How it Works</h2>
+            <div class="system-overview">
+                <h3>System Overview</h3>
+                <p>Blockchain Health Predict combines the tamper-proof nature of blockchain with the predictive power of deep learning. Patient data is securely stored on the blockchain, ensuring privacy and integrity. Deep learning algorithms analyze this data to provide accurate disease predictions.</p>
+            </div>
+            <div class="step-by-step">
+                <h3>Step-by-Step Process</h3>
+                <ol>
+                    <li>Data is collected from various sources and stored securely on the blockchain.</li>
+                    <li>Deep learning models analyze the data to identify patterns and trends.</li>
+                    <li>Predictions are generated and provided to healthcare providers for informed decision-making.</li>
+                </ol>
+            </div>
+        </section>
+    
+        <!-- Add more sections as needed -->
+    
+        <section id="cta">
+            <h2>Ready to Transform Healthcare?</h2>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </section>
+    
+        <footer>
+            <p>&copy; 2023 Blockchain Health Predict. All rights reserved.</p>
+        </footer>
+
+    
+   
+
+</body>
+</html>
