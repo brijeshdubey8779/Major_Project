@@ -2,42 +2,13 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Patient Registration</title>
-    <!-- <link rel="stylesheet" href="./dropdown.css"> -->
     <link rel="stylesheet" type="text/css" href="{% static './css/style.css' %}">
-    
-       
 </head>
+
 <body>
-    <!-- <header>
-        
-        <div id="cont">
-            <div class="logo">
-                <p>HealthBlockAI</p>
-            </div>
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li class="drop"><a href="#">Register</a>
-                <ul class="dropdown">
-                    <li><a href="./patient.html">Patient Registration</a></li>
-                    <li><a href="./Doctor.html">Docture Registration</a></li>
-    
-                </ul>
-                </li>
-                <li class="drop"><a href="#">Login</a>
-                <ul class="dropdown">
-                    <li><a href="./PATIENT LOGIN.html">Patient Login</a></li>
-                    <li><a href="./Docturelogin.html">Docture Login</a></li>
-                    <li><a href="./Adminlogin.html">Hospital Admin Login</a></li>
-    
-                </ul>
-            </li>
-                <li><a href="#">AboutUs</a></li>
-    
-            </ul>
-        </div>
-    </header> -->
     <div class="container">
         <h2>Patient Registration</h2>
         <form method="POST" action="{% url 'patientRegister' %}" class="col-md-5 offset-md-1">
@@ -56,7 +27,8 @@
 
             <label>Gender:</label>
             <input type="radio" id="male" name="gender" value="Male"> <label class="gender" for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female"> <label class="gender" for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="Female"> <label class="gender"
+                for="female">Female</label>
             <input type="radio" id="other" name="gender" value="Other"> <label class="gender" for="other">Other</label>
 
             <label for="address">Address:</label>
@@ -71,7 +43,6 @@
             <button type="submit">Register</button>
         </form>
     </div>
-
-   
 </body>
+
 </html>

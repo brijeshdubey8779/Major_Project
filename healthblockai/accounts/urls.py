@@ -9,5 +9,5 @@ urlpatterns = [
     path("patientRegister", views.patientRegister, name="patientRegister"),
     path("docterRegister", views.docterRegister, name="docterRegister"),
     path("logout", views.logout_user, name="logout"),
-    # path("dashboard", views.dashboard, name="dashboard"),
+    path("pateintdashboard", views.patientdashboard, name="patientdashboard"),
 ]

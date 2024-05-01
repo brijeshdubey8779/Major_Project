@@ -1,0 +1,268 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/doctorDashboard.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Abmin Panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-clinic-medical"></i>
+                        <div class="title"> Hospital </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div class="title">Dashboard</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-stethoscope"></i>
+                        <div class="title">Appointments</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-md"></i>
+                        <div class="title">Doctors</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <div class="title">Departments</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <div class="title">payments</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <div class="title">Settings</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <div class="title">Help</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <div class="search">
+                    <input type="text" name="search" placeholder="search here">
+                    <label for="search"><i class="fas fa-search"></i></label>
+                </div>
+                <i class="fas fa-bell"></i>
+                <div class="user">
+                    <img src="https://www.svgrepo.com/show/284250/surgeon-doctor.svg" alt="">
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">67</div>
+                        <div class="card-name">Appointments</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">105</div>
+                        <div class="card-name">New Patients</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">8</div>
+                        <div class="card-name">Operations</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">$4500</div>
+                        <div class="card-name">Earnings</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tables">
+                <div class="last-appointments">
+                    <div class="heading">
+                        <h2>Last Appointments</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table class="appointments">
+                        <thead>
+                            <td>Name</td>
+                            <td>Doctor</td>
+                            <td>Condition</td>
+                            <td>Actions</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liam Smith Doe</td>
+                                <td>Dr.Benjamin</td>
+                                <td>fracture</td>
+                                <td>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Liam Smith Doe</td>
+                                <td>Dr.Benjamin</td>
+                                <td>fracture</td>
+                                <td>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Liam Smith Doe</td>
+                                <td>Dr.Benjamin</td>
+                                <td>fracture</td>
+                                <td>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Liam Smith Doe</td>
+                                <td>Dr.Benjamin</td>
+                                <td>fracture</td>
+                                <td>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Liam Smith Doe</td>
+                                <td>Dr.Benjamin</td>
+                                <td>fracture</td>
+                                <td>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Liam Smith Doe</td>
+                                <td>Dr.Benjamin</td>
+                                <td>fracture</td>
+                                <td>
+                                    <i class="far fa-eye"></i>
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="doctor-visiting">
+                    <div class="heading">
+                        <h2>Doctor Visiting</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table class="visiting">
+                        <thead>
+                            <td>Photo</td>
+                            <td>Name</td>
+                            <td>Visit Time</td>
+                            <td>Detail</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="img-box-small">
+                                        <img src="https://www.svgrepo.com/show/284250/surgeon-doctor.svg" alt="">
+                                    </div>
+                                </td>
+                                <td>Benjamin</td>
+                                <td>14:00</td>
+                                <td><i class="far fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img-box-small">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/387/387561.png" alt="">
+                                    </div>
+                                </td>
+                                <td>Benjamin</td>
+                                <td>14:00</td>
+                                <td><i class="far fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img-box-small">
+                                        <img src="https://cdn.dribbble.com/users/1050535/screenshots/5466232/doc-icon.png"
+                                            alt="">
+                                    </div>
+                                </td>
+                                <td>Benjamin</td>
+                                <td>14:00</td>
+                                <td><i class="far fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img-box-small">
+                                        <img src="https://icon-library.com/images/doctor-icon-png/doctor-icon-png-16.jpg"
+                                            alt="">
+                                    </div>
+                                </td>
+                                <td>Benjamin</td>
+                                <td>14:00</td>
+                                <td><i class="far fa-eye"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

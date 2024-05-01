@@ -1,81 +1,51 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Patient Registration</title>
-    <!-- <link rel="stylesheet" href="./dropdown.css"> -->
-    <link rel="stylesheet" type="text/css" href="{% static './css/style.css' %} ">
-    
-       
+    <title>Doctor Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
-    <!-- <header>
-        
-        <div id="cont">
-            <div class="logo">
-                <p>Navbar</p>
+    <div class="container">
+        <h1>Doctor Registration</h1>
+        <form method="POST" action="{% url 'doctor_register' %}" class="col-md-5 offset-md-1">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" required>
             </div>
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li class="drop"><a href="#">Register</a>
-                <ul class="dropdown">
-                    <li><a href="./patient.html">Patient Registration</a></li>
-                    <li><a href="./Doctor.html">Docture Registration</a></li>
-    
-                </ul>
-                </li>
-                <li class="drop"><a href="#">Login</a>
-                <ul class="dropdown">
-                    <li><a href="./PATIENT LOGIN.html">Patient Login</a></li>
-                    <li><a href="./Docturelogin.html">Docture Login</a></li>
-                    <li><a href="./Adminlogin.html">Hospital Admin Login</a></li>
-    
-                </ul>
-            </li>
-                <li><a href="#">AboutUs</a></li>
-    
-            </ul>
-        </div>
-    </header> -->
-<div class="container">
-  <h1>Doctor Registration</h1>
-  <form method="POST" action="{% url 'docterRegister' %}" class="col-md-5 offset-md-1">
-    {% csrf_token %}
-      <div class="form-group">
-          <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" name="full-name" required>
-      </div>
-      <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-          <label for="license-number">Medical License Number</label>
-          <input type="text" id="license-number" name="license-number" required>
-      </div>
-      <div class="form-group">
-          <label for="specialization">Specialization</label>
-          <Input type="text" name="specialization" required>
-             
-          
-          </select>
-     
-      <div class="form-group">
-          <label for="clinic-hospital">Clinic or Hospital Name</label>
-          <input type="text" id="clinic-hospital" name="clinic-hospital" required>
-      </div>
-      <div class="form-group">
-          <label for="phone">Contact Information (Phone number)</label>
-          <input type="tel" id="phone" name="phone" required>
-      </div>
-      <div class="button-container">
-          <button type="submit">Register</button>
-      </div>
-  </form>
-</div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="license-number">Medical License Number</label>
+                <input type="text" id="license-number" name="license_number" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Specialization</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            <div class="form-group">
+                <label for="clinic-hospital">Clinic or Hospital Name</label>
+                <input type="text" id="clinic-hospital" name="clinic_hospital" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Contact Information (Phone number)</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="button-container">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

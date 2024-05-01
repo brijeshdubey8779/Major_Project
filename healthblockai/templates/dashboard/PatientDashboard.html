@@ -1,0 +1,47 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="{% static './css/patientdashboard.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Patient Dashboard</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Patients</a>
+        <a href="#">Appointments</a>
+        <a href="#">Reports</a>
+    </nav>
+    <div class="container">
+        <div class="patient-card">
+            <h2>Patient Name</h2>
+            <p>Age: 35</p>
+            <p>Gender: Male</p>
+            <button class="more-details-btn">More Details</button>
+        </div>
+        <div class="patient-card">
+            <h2>Patient Name</h2>
+            <p>Age: 30</p>
+            <p>Gender: Female</p>
+            <button class="more-details-btn">More Details</button>
+        </div>
+        <div class="patient-card">
+            <h2>Patient Name</h2>
+            <p>Age: 45</p>
+            <p>Gender: female</p>
+            <button class="more-details-btn">More Details</button>
+        </div>
+    </div>
+</body>
+
+</html>

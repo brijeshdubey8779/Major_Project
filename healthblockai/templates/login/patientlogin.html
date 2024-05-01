@@ -1,54 +1,29 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- <link rel="stylesheet" href="./dropdown.css"> -->
-    <link rel="stylesheet" href="{% static "./css/patientlogin.css" %}">
+    <link rel="stylesheet" href="{% static " ./css/patientlogin.css" %}">
 </head>
+
 <body>
-    <!-- <header>
-        
-        <div id="cont">
-            <div class="logo">
-                <p>Navbar</p>
-            </div>
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li class="drop"><a href="#">Register</a>
-                <ul class="dropdown">
-                    <li><a href="./patient.html">Patient Registration</a></li>
-                    <li><a href="./Doctor.html">Docture Registration</a></li>
-    
-                </ul>
-                </li>
-                <li class="drop"><a href="#">Login</a>
-                <ul class="dropdown">
-                    <li><a href="./PATIENT LOGIN.html">Patient Login</a></li>
-                    <li><a href="./Docturelogin.html">Docture Login</a></li>
-                    <li><a href="./Adminlogin.html">Hospital Admin Login</a></li>
-    
-                </ul>
-            </li>
-                <li><a href="#">AboutUs</a></li>
-    
-            </ul>
-        </div>
-    </header> -->
     <div class="contain">
         <div class="text">
             <h1>PATIENT LOGIN</h1>
-            <input class="inp1" type="text" placeholder="Enter UserName">
-            <input class="inp1" type="password" placeholder="Enter Password">
-            <p>Forgot Password?</p>
-            <button>Login</button>
+            <form method="POST" action="{% url 'patientlogin' %}">
+                {% csrf_token %}
+                <input class="inp1" type="text" name="username" placeholder="Enter Username" required>
+                <input class="inp1" type="password" name="password" placeholder="Enter Password" required>
+                <p>Forgot Password?</p>
+                <button type="submit">Login</button>
+            </form>
             <p>Not a member? <a href="./patient.html"><span>SignUp</span></a> </p>
-
         </div>
     </div>
 </body>
+
 </html>
